@@ -31,7 +31,42 @@ use Illuminate\Support\Facades\Route;
 ----------------------------------------------------------------------------------
     Site:
 
-    http://localhost/
+    1. ./vendor/bin/sail up [When you are inside Ubuntu, and logged in]
+    csadi@DESKTOP-9JPD5A8:~/www/laravel-portfolio$ ./vendor/bin/sail up
+
+    Ctrl + C -> Stop Running [Docker]
+
+    2.  Open another terminal
+
+        cd www/
+        cd laravel-portfolio
+
+        csadi@DESKTOP-9JPD5A8:~/www/laravel-portfolio$ ./vendor/bin/sail shell
+        sail@4e1e5803a85c:/var/www/html$
+
+    3. npm run dev
+
+    4. http://localhost/
+    [
+        Or you can click on this: "APP_URL: http://localhost" in the Terminal
+        and opens up the site in browser.
+    ]
+
+    See emails [.env]:
+    http://localhost:8025 -> :8025 is the place the email is sent to
+
+    You can see the emails only when you are using Sail:
+    https://laravel.com/docs/10.x/sail
+
+    MAIL_MAILER=smtp
+    MAIL_HOST=mailpit    <- mailhog is another one [https://laravel.com/docs/10.x/mail#mailtrap]
+    MAIL_PORT=1025
+    MAIL_USERNAME=null
+    MAIL_PASSWORD=null
+    MAIL_ENCRYPTION=null
+    MAIL_FROM_ADDRESS="hello@example.com"
+    MAIL_FROM_NAME="${APP_NAME}"
+
 
 ----------------------------------------------------------------------------------
     Changes:
