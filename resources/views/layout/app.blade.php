@@ -7,6 +7,8 @@
 
     <title>Laravel</title>
 
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <script src="https://apis.google.com/js/platform.js"></script>
