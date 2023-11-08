@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -11,10 +13,12 @@ class ContactController extends Controller
         $validated = $request->validate([
             'name' => 'required',
             'email' => ['required', 'email'],
-            'message' => 'required',
+            'message' => 'required'
         ]);
 
-        // Send email
-        return ['success' => true];
+        Mail::to('oradam200@gmail.com')
+            ->send(new ContactMail($validated['name'], $validated['email'], $validated['message']));
+
+        return $request->all();
     }
 }

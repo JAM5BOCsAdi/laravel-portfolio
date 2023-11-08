@@ -42,7 +42,7 @@
                         My content is mostly focused on practical examples and projects. <br />
                     </p>
                     <x-button-link href="https://www.youtube.com/channel/UCYGlVtACi_4kXvJIvf7Xaqg" variant="red"
-                        target="_blank">
+                        target="_blank" class="mr-3 w-full mb-3 text-center lg:w-auto">
                         View my channel
                     </x-button-link>
                 </div>
